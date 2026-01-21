@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blog_blog_author_sections",
+  "info": {
+    "displayName": "BlogAuthorSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bio": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

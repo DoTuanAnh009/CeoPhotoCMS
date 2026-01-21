@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_why_choose_us_items",
+  "info": {
+    "displayName": "WhyChooseUsItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "icon_type": {
+      "type": "enumeration",
+      "enum": [
+        "fast",
+        "price",
+        "support",
+        "quality"
+      ]
+    }
+  },
+  "config": {}
+}

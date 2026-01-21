@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_audience_sections",
+  "info": {
+    "displayName": "AudienceSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "audiences": {
+      "type": "component",
+      "component": "sections.audience-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

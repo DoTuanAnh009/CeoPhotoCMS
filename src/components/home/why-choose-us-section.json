@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_why_choose_us_sections",
+  "info": {
+    "displayName": "WhyChooseUsSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "home.why-choose-us-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

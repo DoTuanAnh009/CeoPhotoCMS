@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_core_service_links",
+  "info": {
+    "displayName": "CoreServiceLink"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

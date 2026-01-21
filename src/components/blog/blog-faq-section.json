@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_blog_blog_faq_sections",
+  "info": {
+    "displayName": "BlogFAQSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

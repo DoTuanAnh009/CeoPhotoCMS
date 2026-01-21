@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_before_after_blocks",
+  "info": {
+    "displayName": "BeforeAfterBlock",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "before_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "after_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "caption": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

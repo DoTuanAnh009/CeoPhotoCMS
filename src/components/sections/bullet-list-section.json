@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_bullet_list_sections",
+  "info": {
+    "displayName": "BulletListSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "sections.bullet-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

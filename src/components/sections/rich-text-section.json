@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_rich_text_sections",
+  "info": {
+    "displayName": "RichTextSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

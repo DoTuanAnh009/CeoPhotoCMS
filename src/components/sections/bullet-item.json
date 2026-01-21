@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_bullet_items",
+  "info": {
+    "displayName": "BulletItem",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

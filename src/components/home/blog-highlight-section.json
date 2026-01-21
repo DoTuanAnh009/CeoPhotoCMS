@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_blog_highlight_sections",
+  "info": {
+    "displayName": "BlogHighlightSection"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

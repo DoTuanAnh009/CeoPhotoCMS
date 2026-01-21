@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_process_steps_sections",
+  "info": {
+    "displayName": "ProcessStepsSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "component": "sections.process-step",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

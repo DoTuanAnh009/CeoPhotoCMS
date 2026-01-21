@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_audience_items",
+  "info": {
+    "displayName": "AudienceItem",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

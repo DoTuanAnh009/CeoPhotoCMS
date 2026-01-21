@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "service_type": {
+      "type": "enumeration",
+      "enum": [
+        "pillar",
+        "cluster"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.rich-text-section",
+        "sections.bullet-list-section",
+        "shared.before-after-block",
+        "sections.process-steps-section",
+        "sections.audience-section",
+        "sections.faq-section"
+      ]
+    }
+  }
+}
