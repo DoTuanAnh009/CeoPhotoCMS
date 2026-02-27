@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blog_blog_index_layout_sections",
+  "info": {
+    "displayName": "BlogIndexLayoutSection"
+  },
+  "options": {},
+  "attributes": {
+    "show_latest": {
+      "type": "boolean",
+      "default": true
+    },
+    "latest_limit": {
+      "type": "integer"
+    },
+    "posts_per_category": {
+      "type": "integer"
+    },
+    "show_category_section": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "config": {}
+}

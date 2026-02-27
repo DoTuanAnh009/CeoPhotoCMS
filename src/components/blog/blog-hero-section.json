@@ -22,10 +22,8 @@
         "audios"
       ]
     },
-    "faqs": {
-      "type": "component",
-      "component": "blog.faq-item",
-      "repeatable": true
+    "link_url": {
+      "type": "string"
     }
   },
   "config": {}

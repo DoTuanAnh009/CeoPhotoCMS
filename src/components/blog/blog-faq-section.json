@@ -5,10 +5,6 @@
     "icon": "bulletList"
   },
   "options": {},
-  "attributes": {
-    "heading": {
-      "type": "string"
-    }
-  },
+  "attributes": {},
   "config": {}
 }

@@ -1,8 +1,7 @@
 {
   "collectionName": "components_home_service_list_sections",
   "info": {
-    "displayName": "ServiceListSection",
-    "icon": "bulletList"
+    "displayName": "ServiceListSection"
   },
   "options": {},
   "attributes": {
@@ -10,9 +9,9 @@
       "type": "string"
     },
     "services": {
-      "type": "component",
-      "component": "home.service-card",
-      "repeatable": true
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
     }
   },
   "config": {}

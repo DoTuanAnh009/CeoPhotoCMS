@@ -8,10 +8,7 @@
     "heading": {
       "type": "string"
     },
-    "cta_text": {
-      "type": "string"
-    },
-    "cta_link": {
+    "description": {
       "type": "string"
     }
   },

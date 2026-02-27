@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blog_quote_sections",
+  "info": {
+    "displayName": "QuoteSection"
+  },
+  "options": {},
+  "attributes": {
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "quote": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

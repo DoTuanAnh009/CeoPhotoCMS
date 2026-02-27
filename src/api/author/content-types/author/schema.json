@@ -31,12 +31,6 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
-    },
-    "blogs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog",
-      "mappedBy": "author"
     }
   }
 }

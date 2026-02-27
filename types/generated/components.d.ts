@@ -19,7 +19,12 @@ export interface BlogBlogContentSection extends Struct.ComponentSchema {
     displayName: 'BlogContentSection';
   };
   attributes: {
+    anchor: Schema.Attribute.String & Schema.Attribute.Required;
     content: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image_alt: Schema.Attribute.String;
+    image_caption: Schema.Attribute.String;
   };
 }
 
@@ -29,9 +34,7 @@ export interface BlogBlogFaqSection extends Struct.ComponentSchema {
     displayName: 'BlogFAQSection';
     icon: 'bulletList';
   };
-  attributes: {
-    heading: Schema.Attribute.String;
-  };
+  attributes: {};
 }
 
 export interface BlogBlogHeroSection extends Struct.ComponentSchema {
@@ -42,11 +45,48 @@ export interface BlogBlogHeroSection extends Struct.ComponentSchema {
   };
   attributes: {
     excerpt: Schema.Attribute.Text;
-    faqs: Schema.Attribute.Component<'blog.faq-item', true>;
     featured_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    link_url: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface BlogBlogIndexLayoutSection extends Struct.ComponentSchema {
+  collectionName: 'components_blog_blog_index_layout_sections';
+  info: {
+    displayName: 'BlogIndexLayoutSection';
+  };
+  attributes: {
+    latest_limit: Schema.Attribute.Integer;
+    posts_per_category: Schema.Attribute.Integer;
+    show_category_section: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+    show_latest: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+  };
+}
+
+export interface BlogBlogTableOfContentsSection extends Struct.ComponentSchema {
+  collectionName: 'components_blog_blog_table_of_contents_sections';
+  info: {
+    displayName: 'BlogTableOfContentsSection';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'blog.blog-toc-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlogBlogTocItem extends Struct.ComponentSchema {
+  collectionName: 'components_blog_blog_toc_items';
+  info: {
+    displayName: 'BlogTOCItem';
+  };
+  attributes: {
+    anchor: Schema.Attribute.String & Schema.Attribute.Required;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer;
   };
 }
 
@@ -62,14 +102,86 @@ export interface BlogFaqItem extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogGallerySection extends Struct.ComponentSchema {
+  collectionName: 'components_blog_gallery_sections';
+  info: {
+    displayName: 'GallerySection';
+  };
+  attributes: {
+    caption: Schema.Attribute.String;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+  };
+}
+
+export interface BlogImageSection extends Struct.ComponentSchema {
+  collectionName: 'components_blog_image_sections';
+  info: {
+    displayName: 'ImageSection';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image_alt: Schema.Attribute.String;
+    image_caption: Schema.Attribute.String;
+  };
+}
+
+export interface BlogQuoteSection extends Struct.ComponentSchema {
+  collectionName: 'components_blog_quote_sections';
+  info: {
+    displayName: 'QuoteSection';
+  };
+  attributes: {
+    author: Schema.Attribute.Relation<'oneToOne', 'api::author.author'>;
+    position: Schema.Attribute.String;
+    quote: Schema.Attribute.String;
+  };
+}
+
+export interface BlogTableSection extends Struct.ComponentSchema {
+  collectionName: 'components_blog_table_sections';
+  info: {
+    displayName: 'TableSection';
+  };
+  attributes: {
+    caption: Schema.Attribute.String;
+    table: Schema.Attribute.RichText;
+  };
+}
+
+export interface BlogTextSection extends Struct.ComponentSchema {
+  collectionName: 'components_blog_text_sections';
+  info: {
+    displayName: 'TextSection';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText;
+  };
+}
+
+export interface BlogVideoSection extends Struct.ComponentSchema {
+  collectionName: 'components_blog_video_sections';
+  info: {
+    displayName: 'VideoSection';
+  };
+  attributes: {
+    caption: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+    url_upload: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
 export interface HomeBlogHighlightSection extends Struct.ComponentSchema {
   collectionName: 'components_home_blog_highlight_sections';
   info: {
     displayName: 'BlogHighlightSection';
   };
   attributes: {
-    cta_link: Schema.Attribute.String;
-    cta_text: Schema.Attribute.String;
+    description: Schema.Attribute.String;
     heading: Schema.Attribute.String;
   };
 }
@@ -83,7 +195,6 @@ export interface HomeBullet extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
-    step_url: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -146,6 +257,7 @@ export interface HomeServiceCard extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.String;
+    service_type: Schema.Attribute.Enumeration<['pillar', 'cluster']>;
     short_description: Schema.Attribute.String;
     slug: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -156,11 +268,10 @@ export interface HomeServiceListSection extends Struct.ComponentSchema {
   collectionName: 'components_home_service_list_sections';
   info: {
     displayName: 'ServiceListSection';
-    icon: 'bulletList';
   };
   attributes: {
     heading: Schema.Attribute.String;
-    services: Schema.Attribute.Component<'home.service-card', true>;
+    services: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
   };
 }
 
@@ -209,8 +320,35 @@ export interface HomeWhyChooseUsItem extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.String;
+    icon_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     icon_type: Schema.Attribute.Enumeration<
-      ['fast', 'price', 'support', 'quality']
+      [
+        'fast',
+        'price',
+        'support',
+        'quality',
+        'time',
+        'engagement',
+        'features',
+        'emotion',
+        'visual',
+        'social',
+        'warm_light',
+        'sunset',
+        'depth',
+        'timeless',
+        'cleaner',
+        'spacious',
+        'highlight',
+        'neutral',
+        'boost',
+        'twilight',
+        'details',
+        'color',
+        'no_glare',
+      ]
     >;
     title: Schema.Attribute.String;
   };
@@ -334,6 +472,23 @@ export interface SectionsRichTextSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsShowcaseSection extends Struct.ComponentSchema {
+  collectionName: 'components_sections_showcase_sections';
+  info: {
+    displayName: 'ShowcaseSection';
+  };
+  attributes: {
+    before_after: Schema.Attribute.Component<'shared.before-after-block', true>;
+    cta_link: Schema.Attribute.String;
+    cta_text: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    is_slide: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface SharedBeforeAfterBlock extends Struct.ComponentSchema {
   collectionName: 'components_shared_before_after_blocks';
   info: {
@@ -341,13 +496,17 @@ export interface SharedBeforeAfterBlock extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
+    affter_alt: Schema.Attribute.String;
     after_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    before_alt: Schema.Attribute.String;
     before_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     caption: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    link_url: Schema.Attribute.String;
   };
 }
 
@@ -383,7 +542,16 @@ declare module '@strapi/strapi' {
       'blog.blog-content-section': BlogBlogContentSection;
       'blog.blog-faq-section': BlogBlogFaqSection;
       'blog.blog-hero-section': BlogBlogHeroSection;
+      'blog.blog-index-layout-section': BlogBlogIndexLayoutSection;
+      'blog.blog-table-of-contents-section': BlogBlogTableOfContentsSection;
+      'blog.blog-toc-item': BlogBlogTocItem;
       'blog.faq-item': BlogFaqItem;
+      'blog.gallery-section': BlogGallerySection;
+      'blog.image-section': BlogImageSection;
+      'blog.quote-section': BlogQuoteSection;
+      'blog.table-section': BlogTableSection;
+      'blog.text-section': BlogTextSection;
+      'blog.video-section': BlogVideoSection;
       'home.blog-highlight-section': HomeBlogHighlightSection;
       'home.bullet': HomeBullet;
       'home.hero-slide': HomeHeroSlide;
@@ -406,6 +574,7 @@ declare module '@strapi/strapi' {
       'sections.process-step': SectionsProcessStep;
       'sections.process-steps-section': SectionsProcessStepsSection;
       'sections.rich-text-section': SectionsRichTextSection;
+      'sections.showcase-section': SectionsShowcaseSection;
       'shared.before-after-block': SharedBeforeAfterBlock;
       'shared.core-service-link': SharedCoreServiceLink;
       'shared.seo': SharedSeo;

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blog_video_sections",
+  "info": {
+    "displayName": "VideoSection"
+  },
+  "options": {},
+  "attributes": {
+    "url_upload": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

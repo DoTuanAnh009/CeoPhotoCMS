@@ -8,14 +8,21 @@
     "title": {
       "type": "string"
     },
-    "slug": {
-      "type": "string"
-    },
     "short_description": {
       "type": "string"
     },
     "image": {
       "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "service_type": {
+      "type": "enumeration",
+      "enum": [
+        "pillar",
+        "cluster"
+      ]
     }
   },
   "config": {}

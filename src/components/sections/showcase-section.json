@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sections_showcase_sections",
+  "info": {
+    "displayName": "ShowcaseSection"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "before_after": {
+      "type": "component",
+      "component": "shared.before-after-block",
+      "repeatable": true
+    },
+    "is_slide": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "bulk_orders",
+  "info": {
+    "singularName": "bulk-order",
+    "pluralName": "bulk-orders",
+    "displayName": "BulkOrder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "blog.blog-hero-section",
+        "home.try-for-free-section"
+      ]
+    }
+  }
+}

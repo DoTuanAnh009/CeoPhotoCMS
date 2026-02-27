@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_table_sections",
+  "info": {
+    "displayName": "TableSection"
+  },
+  "options": {},
+  "attributes": {
+    "table": {
+      "type": "richtext"
+    },
+    "caption": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

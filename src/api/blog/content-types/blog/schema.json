@@ -1,49 +1,38 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "blogs",
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "Blog"
+    "displayName": "Blogs"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
+    "hero": {
+      "type": "component",
+      "component": "blog.blog-hero-section",
+      "repeatable": false
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
+    "intro": {
+      "type": "blocks"
     },
-    "createAt": {
-      "type": "datetime"
+    "blog_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-category.blog-category"
     },
     "seo": {
       "type": "component",
       "component": "shared.seo",
       "repeatable": false
     },
-    "hero": {
+    "layout": {
       "type": "component",
-      "component": "blog.blog-hero-section",
+      "component": "blog.blog-index-layout-section",
       "repeatable": false
-    },
-    "sections": {
-      "type": "dynamiczone",
-      "components": [
-        "blog.blog-content-section",
-        "blog.blog-faq-section"
-      ]
-    },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "blogs"
     }
   }
 }

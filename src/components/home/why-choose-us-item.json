@@ -17,7 +17,36 @@
         "fast",
         "price",
         "support",
-        "quality"
+        "quality",
+        "time",
+        "engagement",
+        "features",
+        "emotion",
+        "visual",
+        "social",
+        "warm_light",
+        "sunset",
+        "depth",
+        "timeless",
+        "cleaner",
+        "spacious",
+        "highlight",
+        "neutral",
+        "boost",
+        "twilight",
+        "details",
+        "color",
+        "no_glare"
+      ]
+    },
+    "icon_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     }
   },

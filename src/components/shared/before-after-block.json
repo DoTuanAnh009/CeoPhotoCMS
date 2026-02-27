@@ -28,6 +28,18 @@
     },
     "caption": {
       "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "affter_alt": {
+      "type": "string"
+    },
+    "before_alt": {
+      "type": "string"
+    },
+    "link_url": {
+      "type": "string"
     }
   },
   "config": {}

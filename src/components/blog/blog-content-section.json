@@ -5,8 +5,32 @@
   },
   "options": {},
   "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "anchor": {
+      "type": "string",
+      "required": true
+    },
     "content": {
       "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image_alt": {
+      "type": "string"
+    },
+    "image_caption": {
+      "type": "string"
     }
   },
   "config": {}

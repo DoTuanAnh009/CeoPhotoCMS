@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blog_blog_table_of_contents_sections",
+  "info": {
+    "displayName": "BlogTableOfContentsSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "blog.blog-toc-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

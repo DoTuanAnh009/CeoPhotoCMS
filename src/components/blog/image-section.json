@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blog_image_sections",
+  "info": {
+    "displayName": "ImageSection"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image_alt": {
+      "type": "string"
+    },
+    "image_caption": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

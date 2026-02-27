@@ -15,6 +15,19 @@
       "type": "component",
       "component": "shared.seo",
       "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "home.hero-slider-section",
+        "home.why-choose-us-section",
+        "sections.process-steps-section",
+        "home.testimonial-section",
+        "home.partners-section",
+        "home.blog-highlight-section",
+        "home.try-for-free-section",
+        "home.service-list-section"
+      ]
     }
   }
 }

@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leads",
+  "info": {
+    "singularName": "lead",
+    "pluralName": "leads",
+    "displayName": "lead"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": [
+        "website-page",
+        "contact-page",
+        "landing-page",
+        "facebook",
+        "tiktok",
+        "zalo",
+        "ads",
+        "organic",
+        "other"
+      ]
+    },
+    "service": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service.service"
+    },
+    "status_lead": {
+      "type": "enumeration",
+      "required": true,
+      "default": "new",
+      "enum": [
+        "new",
+        "contacted",
+        "qualified",
+        "proposal-sent",
+        "won",
+        "lost",
+        "spam"
+      ]
+    },
+    "ip_address": {
+      "type": "string"
+    },
+    "user_agent": {
+      "type": "string"
+    },
+    "note": {
+      "type": "richtext"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "shareLink": {
+      "type": "string"
+    }
+  }
+}

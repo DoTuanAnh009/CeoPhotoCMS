@@ -18,13 +18,6 @@
       "type": "uid",
       "targetField": "title"
     },
-    "service_type": {
-      "type": "enumeration",
-      "enum": [
-        "pillar",
-        "cluster"
-      ]
-    },
     "seo": {
       "type": "component",
       "component": "shared.seo",
@@ -33,12 +26,50 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "sections.rich-text-section",
-        "sections.bullet-list-section",
         "shared.before-after-block",
-        "sections.process-steps-section",
-        "sections.audience-section",
-        "sections.faq-section"
+        "sections.faq-section",
+        "home.testimonial-section",
+        "blog.blog-hero-section",
+        "home.why-choose-us-section",
+        "sections.showcase-section",
+        "sections.rich-text-section",
+        "home.service-list-section"
+      ]
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service-category.service-category",
+      "inversedBy": "services"
+    },
+    "background_image_before": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "background_image_after": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     }
   }

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blog_blog_toc_items",
+  "info": {
+    "displayName": "BlogTOCItem"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "anchor": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}
