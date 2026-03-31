@@ -181,6 +181,10 @@ export interface HomeBlogHighlightSection extends Struct.ComponentSchema {
     displayName: 'BlogHighlightSection';
   };
   attributes: {
+    blog_posts: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-post.blog-post'
+    >;
     description: Schema.Attribute.String;
     heading: Schema.Attribute.String;
   };
@@ -223,6 +227,18 @@ export interface HomeHeroSliderSection extends Struct.ComponentSchema {
   };
   attributes: {
     slides: Schema.Attribute.Component<'home.hero-slide', true>;
+  };
+}
+
+export interface HomeHowToWorkSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_how_to_work_sections';
+  info: {
+    displayName: 'HowToWorkSection';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    steps: Schema.Attribute.Component<'sections.process-step', false>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -505,7 +521,7 @@ export interface SharedBeforeAfterBlock extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     caption: Schema.Attribute.String;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     link_url: Schema.Attribute.String;
   };
 }
@@ -556,6 +572,7 @@ declare module '@strapi/strapi' {
       'home.bullet': HomeBullet;
       'home.hero-slide': HomeHeroSlide;
       'home.hero-slider-section': HomeHeroSliderSection;
+      'home.how-to-work-section': HomeHowToWorkSection;
       'home.partner': HomePartner;
       'home.partners-section': HomePartnersSection;
       'home.service-card': HomeServiceCard;

@@ -30,7 +30,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "affter_alt": {
       "type": "string"

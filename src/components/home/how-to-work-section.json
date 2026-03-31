@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_how_to_work_sections",
+  "info": {
+    "displayName": "HowToWorkSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "steps": {
+      "type": "component",
+      "component": "sections.process-step",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
