@@ -236,8 +236,11 @@ export interface HomeHowToWorkSection extends Struct.ComponentSchema {
     displayName: 'HowToWorkSection';
   };
   attributes: {
+    background_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     description: Schema.Attribute.Text;
-    steps: Schema.Attribute.Component<'sections.process-step', false>;
+    items: Schema.Attribute.Component<'sections.process-step', true>;
     title: Schema.Attribute.String;
   };
 }

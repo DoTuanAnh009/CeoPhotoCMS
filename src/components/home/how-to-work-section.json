@@ -11,10 +11,20 @@
     "description": {
       "type": "text"
     },
-    "steps": {
+    "items": {
       "type": "component",
       "component": "sections.process-step",
-      "repeatable": false
+      "repeatable": true
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}
