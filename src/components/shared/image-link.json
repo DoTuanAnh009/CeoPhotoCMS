@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_image_links",
+  "info": {
+    "displayName": "image-link"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

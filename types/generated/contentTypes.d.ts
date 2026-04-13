@@ -766,6 +766,7 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     email: Schema.Attribute.String & Schema.Attribute.Required;
     full_name: Schema.Attribute.String & Schema.Attribute.Required;
+    imageLinks: Schema.Attribute.Component<'shared.image-link', true>;
     ip_address: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'> &

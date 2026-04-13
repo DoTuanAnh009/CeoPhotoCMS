@@ -541,6 +541,16 @@ export interface SharedCoreServiceLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedImageLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_image_links';
+  info: {
+    displayName: 'image-link';
+  };
+  attributes: {
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -597,6 +607,7 @@ declare module '@strapi/strapi' {
       'sections.showcase-section': SectionsShowcaseSection;
       'shared.before-after-block': SharedBeforeAfterBlock;
       'shared.core-service-link': SharedCoreServiceLink;
+      'shared.image-link': SharedImageLink;
       'shared.seo': SharedSeo;
     }
   }
