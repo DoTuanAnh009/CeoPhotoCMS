@@ -41,6 +41,9 @@
       "relation": "oneToMany",
       "target": "api::service.service",
       "mappedBy": "category"
+    },
+    "index": {
+      "type": "integer"
     }
   }
 }

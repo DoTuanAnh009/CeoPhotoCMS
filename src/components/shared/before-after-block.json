@@ -40,6 +40,11 @@
     },
     "link_url": {
       "type": "string"
+    },
+    "room_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::room-category.room-category"
     }
   },
   "config": {}

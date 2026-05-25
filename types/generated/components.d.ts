@@ -526,6 +526,10 @@ export interface SharedBeforeAfterBlock extends Struct.ComponentSchema {
     caption: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     link_url: Schema.Attribute.String;
+    room_categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::room-category.room-category'
+    >;
   };
 }
 

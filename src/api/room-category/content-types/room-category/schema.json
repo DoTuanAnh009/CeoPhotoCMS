@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_categories",
+  "info": {
+    "singularName": "room-category",
+    "pluralName": "room-categories",
+    "displayName": "Room Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -71,6 +71,9 @@
         "videos",
         "audios"
       ]
+    },
+    "index": {
+      "type": "integer"
     }
   }
 }
